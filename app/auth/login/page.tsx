@@ -4,11 +4,12 @@ import { useState, useId } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
-  Mail, Lock, Eye, EyeOff, Sparkles, Zap,
+  Mail, Lock, Eye, EyeOff, Zap,
   ArrowRight, Dumbbell, Heart, Briefcase, ScanLine,
   AlertCircle, CheckCircle2, LogIn,
 } from "lucide-react";
 import { useUser } from "@/lib/userContext";
+import PlannerHubLogo from "@/components/PlannerHubLogo";
 
 /* ── Feature tiles for left panel ── */
 const FEATURES = [
@@ -118,19 +119,8 @@ function BrandPanel() {
 
       <div style={{ position: "relative", zIndex: 1 }}>
         {/* Logo */}
-        <div style={{ display: "flex", alignItems: "center", gap: "0.875rem", marginBottom: "3rem" }}>
-          <div style={{
-            width: 48, height: 48, borderRadius: 14,
-            background: "var(--grad-primary)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            boxShadow: "0 8px 24px rgba(0,212,255,0.3)",
-          }}>
-            <Sparkles size={24} color="white" />
-          </div>
-          <div>
-            <div style={{ fontSize: "1.25rem", fontWeight: 800, fontFamily: "Sora, sans-serif" }}>PlannerHub</div>
-            <div style={{ fontSize: "0.7rem", color: "var(--accent-cyan)", fontWeight: 600, letterSpacing: "0.08em" }}>AI-POWERED PLATFORM</div>
-          </div>
+        <div style={{ marginBottom: "3rem" }}>
+          <PlannerHubLogo width={200} showTagline={true} />
         </div>
 
         {/* Headline */}

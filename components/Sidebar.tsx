@@ -9,7 +9,6 @@ import {
   Heart,
   Briefcase,
   ScanLine,
-  Sparkles,
   ChevronRight,
   Menu,
   X,
@@ -17,6 +16,7 @@ import {
   LifeBuoy,
   CreditCard,
 } from "lucide-react";
+import PlannerHubLogo from "@/components/PlannerHubLogo";
 import { useUser } from "@/lib/userContext";
 
 const navItems = [
@@ -73,13 +73,7 @@ export default function Sidebar() {
     <>
       {/* Logo */}
       <div className="sidebar-logo">
-        <div className="logo-icon">
-          <Sparkles size={20} color="white" />
-        </div>
-        <div>
-          <div className="logo-text">PlannerHub</div>
-          <div className="logo-sub">AI-Powered Platform</div>
-        </div>
+        <PlannerHubLogo width={160} showTagline={false} />
         {/* Close button — mobile only */}
         <button
           className="sidebar-close-btn"
@@ -168,12 +162,7 @@ export default function Sidebar() {
           <Menu size={22} />
         </button>
 
-        <div style={{ display: "flex", alignItems: "center", gap: "0.625rem" }}>
-          <div className="logo-icon" style={{ width: 30, height: 30, borderRadius: 9 }}>
-            <Sparkles size={15} color="white" />
-          </div>
-          <span className="logo-text" style={{ fontSize: "1rem" }}>PlannerHub</span>
-        </div>
+        <PlannerHubLogo width={140} showTagline={false} />
 
         <div className="user-avatar" style={{ width: 32, height: 32, fontSize: "0.75rem" }}>
           {initials}

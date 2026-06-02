@@ -4,11 +4,12 @@ import { useState, useId } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
-  Mail, Lock, Eye, EyeOff, Sparkles, User,
+  Mail, Lock, Eye, EyeOff, User,
   ArrowRight, Dumbbell, Heart, Briefcase, ScanLine,
   AlertCircle, CheckCircle2, UserPlus, ShieldCheck,
 } from "lucide-react";
 import { useUser } from "@/lib/userContext";
+import PlannerHubLogo from "@/components/PlannerHubLogo";
 
 /* ── Shared feature tiles ── */
 const FEATURES = [
@@ -132,14 +133,8 @@ function BrandPanel() {
       <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(124,58,237,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(124,58,237,0.03) 1px, transparent 1px)", backgroundSize: "48px 48px", pointerEvents: "none" }} />
 
       <div style={{ position: "relative", zIndex: 1 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "0.875rem", marginBottom: "2.75rem" }}>
-          <div style={{ width: 48, height: 48, borderRadius: 14, background: "var(--grad-violet)", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 8px 24px rgba(124,58,237,0.35)" }}>
-            <Sparkles size={24} color="white" />
-          </div>
-          <div>
-            <div style={{ fontSize: "1.25rem", fontWeight: 800, fontFamily: "Sora, sans-serif" }}>PlannerHub</div>
-            <div style={{ fontSize: "0.7rem", color: "var(--accent-violet-light)", fontWeight: 600, letterSpacing: "0.08em" }}>AI-POWERED PLATFORM</div>
-          </div>
+        <div style={{ marginBottom: "2.75rem" }}>
+          <PlannerHubLogo width={200} showTagline={true} />
         </div>
 
         <h1 style={{ fontSize: "2rem", fontWeight: 900, lineHeight: 1.2, marginBottom: "0.875rem", fontFamily: "Sora, sans-serif" }}>
